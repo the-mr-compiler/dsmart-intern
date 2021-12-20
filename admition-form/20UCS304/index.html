@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Admission Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Admission Form</legend>
+      <form action="index.html" id="form1" method="get">
+        <label for="fname">Name :</label>
+        <div class="input-field name">
+          <input
+            required
+            class="s1-2 input"
+            type="text"
+            placeholder="First Name"
+            name="firstname"
+            id="firstname"
+          />
+          <input
+            class="s1-2 input"
+            required
+            type="text"
+            placeholder="Last Name"
+            name="lastname"
+            id="lastname"
+          />
+        </div>
+        <label for="">Parents Detail :</label>
+        <div class="input-field">
+          <input
+            class="s1-2 input"
+            type="text"
+            name="fathername"
+            placeholder="Father's Name"
+            id="fathername"
+          />
+          <input
+            class="s1-2 input"
+            type="text"
+            name="mothername"
+            placeholder="Mother's Name"
+            id="mothername"
+          />
+        </div>
+        <label for="email">Email:</label>
+        <div class="input-field">
+          <input
+            type="email"
+            class="s1-1 input"
+            placeholder="yourname@provider.domain"
+            name="email"
+            id="email"
+          />
+        </div>
+
+        <label for="phone">Phone Number:</label>
+        <div class="input-field">
+          <input
+            class="s1-1 input"
+            type="tel"
+            placeholder="9874651230"
+            required
+            name="phone"
+            id="phone"
+          />
+        </div>
+        <label for="dob">Date of Birth:</label>
+        <div class="input-field">
+          <input type="date" class="input s1-1" name="dob" id="dob" />
+        </div>
+      </form>
+
+      <label for="">Course:</label>
+      <div class="input-field">
+        <select
+          class="s1-2 input"
+          type="text"
+          name="course"
+          placeholder="Course"
+          id="course"
+          onchange="courseChange(this)"
+        >
+          <option class="s1-2 input" disabled selected>Select..</option>
+          <option value="1" class="s1-2 input">B. Tech</option>
+          <option value="7" class="s1-2 input">B. Tech DSY</option>
+          <option value="2" class="s1-2 input">M. Tech</option>
+          <option value="3" class="s1-2 input">MBA</option>
+          <option value="4" class="s1-2 input">Diploma</option>
+          <option value="5" class="s1-2 input">PHD</option>
+          <option value="6" class="s1-2 input">B. Voc</option>
+        </select>
+        <select
+          class="s1-2 input"
+          type="text"
+          name="stream"
+          placeholder="Stream"
+          id="stream"
+        ></select>
+      </div>
+
+      <div class="input-field">
+        <label>Passport Size Photo:</label>
+        <input
+          type="file"
+          class="s1-1 input"
+          onchange="photoUpload(event)"
+          name="photo"
+          id="photo"
+        />
+      </div>
+      <div class="input-field">
+        <input
+          class="s1-2 input"
+          type="reset"
+          name="clear"
+          onclick="resetForm(this)"
+          id="clear"
+          value="Clear"
+        />
+        <input
+          class="s1-2 input"
+          name="clear"
+          id="clear"
+          onclick="submitForm()"
+          type="submit"
+          value="Submit"
+        />
+      </div>
+    </fieldset>
+  </body>
+</html>
