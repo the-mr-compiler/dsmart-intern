@@ -9,3 +9,5 @@ D-Smart Internship tasks
 [Portfolio Using Bootstrap](portfolio-bootstrap)
 
 [Aicte Site](aicte-site)
+
+[Basic Javascript (OnClick event)](javascript-onclick)
