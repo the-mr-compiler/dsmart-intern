@@ -6,5 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript</title>
   </head>
-  <body></body>
+  <body>
+    <p>Fibonacci Series</p>
+    <input
+      type="number"
+      name="fib"
+      id="fibinput"
+      value="1"
+      min="1"
+      onchange="fab(this.value)"
+    />
+    <p id="fibout"></p>
+    <p>Factorial</p>
+    <input
+      type="number"
+      name="fact"
+      id="factinput"
+      value="1"
+      min="1"
+      onchange="fact(this.value)"
+    />
+    <p id="factout"></p>
+
+    <script>
+      function fab(num) {
+        num = Number(num);
+        document.getElementById("fibout").innerHTML = " Fibonacci series :";
+        document.getElementById("fibout").innerHTML += " 1";
+        var prev = 0,
+          cur = 1;
+        for (i = 2; i <= num; i++) {
+          let temp = cur;
+          cur = prev + cur;
+          prev = temp;
+          document.getElementById("fibout").innerHTML += " " + cur;
+        }
+      }
+      function factorial(no) {
+        return no <= 0 ? 1 : no * factorial(no - 1);
+      }
+      function fact(no) {
+        document.getElementById("factout").innerHTML =
+          " Factorial of " + no + ":" + factorial(Number(no));
+      }
+    </script>
+  </body>
 </html>
