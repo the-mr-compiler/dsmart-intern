@@ -51,21 +51,26 @@
           />
         </div>
         <div class="col-12 order-3 order-sm-2 col-sm-8">
-          <h1 id="font" class="p-4 text-uppercase">
-            <div class="pt-3 h-100">
-              DKTE Institute
-              <img
-                class="ms-2 d-none d-sm-inline"
-                width="60px"
-                height="50px"
-                src="./logo.webp"
-                alt=""
-              />
-            </div>
-
+          <h1 id="font" class="p-4 d-sm-none text-uppercase">
+            <div class="pt-3 h-100">DKTE Institute</div>
             OF TECHNOLOGY
           </h1>
+          <div class="d-none d-sm-inline">
+            <img
+              style="position: absolute; margin-left: 150px"
+              src="./logo.webp"
+              width="80px"
+              alt="logo"
+            />
+            <img
+              src="./rajwada.webp"
+              width="400px"
+              height="100px"
+              alt="Rajwada"
+            />
+          </div>
         </div>
+
         <div class="col-4 order-2 col-sm-2 order-sm-3">
           <img
             class="col-8 col-sm-6 img-fluid"
@@ -397,7 +402,7 @@
 
             <div class="card-content my-3 mx-4 mx-sm-5 text-center">
               <ul class="nav nav-tabs justify-content-center" role="tablist">
-                <li class="nav-item" role="presentation">
+                <li class="nav-item col-6 col-sm-2" role="presentation">
                   <button
                     class="nav-link active"
                     id="conf-tab0"
@@ -411,7 +416,7 @@
                     Indoor Events
                   </button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="nav-item col-6 col-sm-2" role="presentation">
                   <button
                     class="nav-link"
                     id="conf2-tab0"
@@ -435,7 +440,7 @@
                   aria-labelledby="conf-tab0"
                 >
                   <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-sm-4 pt-sm-0 px-0 px-sm-4">
                       <div class="card h-100">
                         <div
                           class="bg-image hover-overlay ripple"
@@ -474,7 +479,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-sm-4 pt-4 pt-sm-0 px-0 px-sm-4">
                       <div class="card h-100">
                         <div
                           class="bg-image hover-overlay ripple"
@@ -513,7 +518,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-sm-4 pt-4 pt-sm-0 px-0 px-sm-4">
                       <div class="card h-100">
                         <div
                           class="bg-image hover-overlay ripple"
@@ -561,7 +566,7 @@
                   aria-labelledby="conf2-tab0"
                 >
                   <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-sm-4 pt-sm-0 px-0 px-sm-4">
                       <div class="card h-100">
                         <div
                           class="bg-image hover-overlay ripple"
@@ -600,7 +605,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-sm-4 pt-sm-0 px-0 px-sm-4">
                       <div class="card h-100">
                         <div
                           class="bg-image hover-overlay ripple"
@@ -639,7 +644,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-sm-4 pt-sm-0 px-0 px-sm-4">
                       <div class="card h-100">
                         <div
                           class="bg-image hover-overlay ripple"
@@ -801,7 +806,7 @@
                       </p>
                     </div>
                     <a
-                      href="javascript:openModal('./Photo_Best_Paper_Award.jpg','Best Paper award at National conference')"
+                      onclick="openModal('./Photo_Best_Paper_Award.jpg','Best Paper award at National conference')"
                     >
                       <div
                         class="mask"
@@ -827,15 +832,17 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="container pt-1 pt-sm-4 pb-3">
-        <div class="card shadow-2-strong text-center p-4">
-          <h4>
-            Made with <i class="fas fa-heart text-danger"></i> by Meghanath
-          </h4>
-          <a href="https://github.com/mr-compilerMS" class="link-primary"
-            >The Mr Compiler</a
-          >
+        <!-- Copyright -->
+        <div class="container pt-1 pt-sm-4 pb-3">
+          <div class="card shadow-2-strong text-center p-4">
+            <h4>
+              Made with <i class="fas fa-heart text-danger"></i> by Meghanath
+            </h4>
+
+            <a href="https://github.com/mr-compilerMS" class="link-primary"
+              >the_mr_compiler</a
+            >
+          </div>
         </div>
       </div>
     </div>
