@@ -11,3 +11,7 @@ D-Smart Internship tasks
 [Aicte Site](aicte-site)
 
 [Basic Javascript (OnClick event)](javascript-onclick)
+
+[Factorial and fibonacci series using JS](factorial-fibonacci)
+
+[Todo List](todo)
