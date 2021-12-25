@@ -21,6 +21,25 @@ const firstStart = () => {
     );
     init();
   }
+  document.getElementById("taskinput").focus();
+};
+
+const importFile = (event) => {
+  var file = event.target.files[0];
+  var reader = new FileReader();
+  reader.onload = function (e) {
+    var contents = e.target.result;
+    tasks = JSON.parse(contents);
+    count = Math.max.apply(
+      Math,
+      tasks.map(function (o) {
+        return o.id;
+      })
+    );
+    init();
+  };
+  reader.readAsText(file);
+  init();
 };
 
 const init = () => {
@@ -81,6 +100,19 @@ const clearAllCompleted = () => {
     return task.status !== 2;
   });
   init();
+};
+
+const exportTasks = () => {
+  let tasksToExport = tasks;
+  let tasksToExportString = JSON.stringify(tasksToExport);
+  let tasksToExportBlob = new Blob([tasksToExportString], {
+    type: "application/json",
+  });
+  let tasksToExportURL = URL.createObjectURL(tasksToExportBlob);
+  let tasksToExportLink = document.createElement("a");
+  tasksToExportLink.href = tasksToExportURL;
+  tasksToExportLink.download = "tasks.json";
+  tasksToExportLink.click();
 };
 
 const createTodo = (task) => {
