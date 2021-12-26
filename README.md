@@ -15,3 +15,5 @@ D-Smart Internship tasks
 [Factorial and fibonacci series using JS](factorial-fibonacci)
 
 [Todo List](todo)
+
+[Portfolio New](portfolio-new/index.html)

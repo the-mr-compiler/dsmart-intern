@@ -28,15 +28,19 @@ const importFile = (event) => {
   var file = event.target.files[0];
   var reader = new FileReader();
   reader.onload = function (e) {
-    var contents = e.target.result;
-    tasks = JSON.parse(contents);
-    count = Math.max.apply(
-      Math,
-      tasks.map(function (o) {
-        return o.id;
-      })
-    );
-    init();
+    try {
+      var contents = e.target.result;
+      tasks = JSON.parse(contents);
+      count = Math.max.apply(
+        Math,
+        tasks.map(function (o) {
+          return o.id;
+        })
+      );
+      init();
+    } catch (err) {
+      new bootstrap.Toast(document.getElementById("jsonAlert")).show();
+    }
   };
   reader.readAsText(file);
   init();
@@ -166,7 +170,7 @@ const createTodo = (task) => {
         task.priority
       }" id="item${task.id}">
               <div class="row">
-                <div class="col-11">${task.task.replace(/\n/g, "<br />")}</div>
+                <div class="col-10">${task.task.replace(/\n/g, "<br />")}</div>
                
                 <div class="col-1">
                   <button class="btn btn-outline-primary p-1 px-2 text-dark ms-auto me-0" onclick="deleteTodo(${
