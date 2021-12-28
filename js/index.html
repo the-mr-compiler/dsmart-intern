@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello</title>
+  </head>
+  <body>
+    <input
+      type="number"
+      name="number"
+      id="number"
+      min="1"
+      onchange="calc(this.value)"
+    />
+    <div id="table"></div>
+    <script>
+      const calc = (no) => {
+        var text = "";
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach((i) => {
+          text += `<br/>${i * no}`;
+        });
+        document.getElementById("table").innerHTML = text;
+      };
+    </script>
+  </body>
+</html>
