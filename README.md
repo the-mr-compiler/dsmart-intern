@@ -1,4 +1,4 @@
-# dsmart-intern
+# Internship
 
 D-Smart Internship tasks
 
